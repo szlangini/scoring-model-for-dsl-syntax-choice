@@ -58,7 +58,7 @@ var keyPage = '<p class="lead">In the following 20 different criteria for choosi
 '  <tbody>'+
 '    <tr>'+
 '      <th scope="row">Irrelevant</th>'+
-'      <td>(-)</td>'+
+'      <td>-</td>'+
 '    </tr>'+
 '    <tr>'+
 '      <th scope="row">Neutral</th>'+
@@ -85,14 +85,16 @@ $(".jumbotron").html(keyPage);
     $("#okay").click(function(){
         // Show Criteria catalogue (5 per page)
         
+
+
 var relevanceOnePage = '<p class="small" style="text-align: right;">1/4</p>'+
 '    <p class="lead">How relevant do you think is...</p>'+
 '    <hr class="my-4"/>'+
 '    <form>'+
 '    <div class="form-group">'+
 '    <label for="tool-support">Tool support (maintenance, versioning, IDEs)? </label>'+
-'    <select class="form-control" id="tool-support">'+
-'    <option>Please Choose...</option>'+
+'    <select required class="form-control" id="tool-support">'+
+'      <option disabled="disabled" selected="selected">-- SELECT --</option>'+
 '      <option>(-) Irrelevant</option>'+
 '      <option>(o) Neutral</option>'+
 '      <option>(+) Slightly Relevant</option>'+
@@ -102,8 +104,8 @@ var relevanceOnePage = '<p class="small" style="text-align: right;">1/4</p>'+
 '    </div>'+
 '    <div class="form-group">'+
 '    <label for="teamwork-support">Teamwork support?</label>'+
-'    <select class="form-control" id="teamwork-support">'+
-'            <option>Please Choose...</option>'+
+'    <select required class="form-control" id="teamwork-support">'+
+'      <option disabled="disabled" selected="selected">-- SELECT --</option>'+
 '      <option>(-) Irrelevant</option>'+
 '      <option>(o) Neutral</option>'+
 '      <option>(+) Slightly Relevant</option>'+
@@ -113,8 +115,8 @@ var relevanceOnePage = '<p class="small" style="text-align: right;">1/4</p>'+
 '    </div>'+
 '    <div class="form-group">'+
 '    <label for="architecture">Complexity reduction (architecture, control flows)?</label>'+
-'    <select class="form-control" id="architecture">'+
-'        <option>Please Choose...</option>'+
+'    <select required class="form-control" id="architecture">'+
+'      <option disabled="disabled" selected="selected">-- SELECT --</option>'+
 '      <option>(-) Irrelevant</option>'+
 '      <option>(o) Neutral</option>'+
 '      <option>(+) Slightly Relevant</option>'+
@@ -124,8 +126,8 @@ var relevanceOnePage = '<p class="small" style="text-align: right;">1/4</p>'+
 '    </div>'+
 '    <div class="form-group">'+
 '    <label for="loops">Complexity reduction (code, loops)? </label>'+
-'    <select class="form-control" id="loops">'+
-'            <option>Please Choose...</option>'+
+'    <select required class="form-control" id="loops">'+
+'      <option disabled="disabled" selected="selected">-- SELECT --</option>'+
 '      <option>(-) Irrelevant</option>'+
 '      <option>(o) Neutral</option>'+
 '      <option>(+) Slightly Relevant</option>'+
@@ -135,9 +137,8 @@ var relevanceOnePage = '<p class="small" style="text-align: right;">1/4</p>'+
 '    </div>'+
 '    <div class="form-group">'+
 '    <label for="outcome-limit">Limiting the possible outcomes?</label>'+
-'    <select class="form-control" id="outcome-limit">'+
-'        <option>Please Choose...</option>'+
-''+
+'    <select required class="form-control" id="outcome-limit">'+
+'      <option disabled="disabled" selected="selected">-- SELECT --</option>'+
 '      <option>(-) Irrelevant</option>'+
 '      <option>(o) Neutral</option>'+
 '      <option>(+) Slightly Relevant</option>'+
@@ -145,11 +146,34 @@ var relevanceOnePage = '<p class="small" style="text-align: right;">1/4</p>'+
 '      <option>(+++) Very Relevant</option>'+
 '    </select>'+
 '    </div>'+
-'</form>'+
-'    '+
-'<center><a class="btn btn-primary btn-lg" href="#" role="button" id="next_page">Next</a></center>';
+'	<button type="submit" class="btn btn-primary" id="next_page_1" style="position: relative; float: right;">Next ></button>'+
+'</form>';
+	
+
+
 	
 $(".jumbotron").html(relevanceOnePage);
+
+	$("#next_page_1").click(function(){
+		
+	var selectedOptions = $(".form-control option:selected").text();
+	
+	if (selectedOptions.search('-- SELECT --') != -1) {
+		alert("Please select an option for every criterion.");
+
+	} else{
+		// proceed here 
+		
+		// 1. Storing the information
+		
+		
+	}
+		
+	//alert($("#tool-support option:selected").text());
+		
+		
+		
+	})
 
         
     })

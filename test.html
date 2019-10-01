@@ -20,8 +20,8 @@
     <form>
     <div class="form-group">
     <label for="tool-support">Tool support (maintenance, versioning, IDEs)? </label>
-    <select class="form-control" id="tool-support">
-    <option>Please Choose...</option>
+    <select required class="form-control" id="tool-support">
+      <option disabled="disabled" selected="selected">-- SELECT --</option>
       <option>(-) Irrelevant</option>
       <option>(o) Neutral</option>
       <option>(+) Slightly Relevant</option>
@@ -31,8 +31,8 @@
     </div>
     <div class="form-group">
     <label for="teamwork-support">Teamwork support?</label>
-    <select class="form-control" id="teamwork-support">
-            <option>Please Choose...</option>
+    <select required class="form-control" id="teamwork-support">
+      <option disabled="disabled" selected="selected">-- SELECT --</option>
       <option>(-) Irrelevant</option>
       <option>(o) Neutral</option>
       <option>(+) Slightly Relevant</option>
@@ -42,8 +42,8 @@
     </div>
     <div class="form-group">
     <label for="architecture">Complexity reduction (architecture, control flows)?</label>
-    <select class="form-control" id="architecture">
-        <option>Please Choose...</option>
+    <select required class="form-control" id="architecture">
+      <option disabled="disabled" selected="selected">-- SELECT --</option>
       <option>(-) Irrelevant</option>
       <option>(o) Neutral</option>
       <option>(+) Slightly Relevant</option>
@@ -53,8 +53,8 @@
     </div>
     <div class="form-group">
     <label for="loops">Complexity reduction (code, loops)? </label>
-    <select class="form-control" id="loops">
-            <option>Please Choose...</option>
+    <select required class="form-control" id="loops">
+      <option disabled="disabled" selected="selected">-- SELECT --</option>
       <option>(-) Irrelevant</option>
       <option>(o) Neutral</option>
       <option>(+) Slightly Relevant</option>
@@ -64,9 +64,8 @@
     </div>
     <div class="form-group">
     <label for="outcome-limit">Limiting the possible outcomes?</label>
-    <select class="form-control" id="outcome-limit">
-        <option>Please Choose...</option>
-
+    <select required class="form-control" id="outcome-limit">
+      <option disabled="disabled" selected="selected">-- SELECT --</option>
       <option>(-) Irrelevant</option>
       <option>(o) Neutral</option>
       <option>(+) Slightly Relevant</option>
@@ -74,9 +73,9 @@
       <option>(+++) Very Relevant</option>
     </select>
     </div>
+	<button type="submit" class="btn btn-primary" id="next_page_1" style="position: relative; float: right;">Next ></button>
 </form>
     
-<center><a class="btn btn-primary btn-lg" href="#" role="button" id="next_page">Next</a></center>
     </div>
 </div>
     <!-- Optional JavaScript -->
