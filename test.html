@@ -14,66 +14,66 @@
   <body>
 <div class="center">
     <div class="jumbotron">
-    <p class="small" style="text-align: right;">1/4</p>
+    <p class="small" style="text-align: right;">Economical Orientation 3/3</p>
     <p class="lead">How relevant do you think is...</p>
     <hr class="my-4"/>
     <form>
-    <div class="form-group">
-    <label for="tool-support">Tool support (maintenance, versioning, IDEs)? </label>
-    <select required class="form-control" id="tool-support">
+	<div class="form-group">
+	<label for="cost-eff">Cost-effective development of DSLs?</label>
+    <select required class="form-control textual-syntax" id="cost-eff">
       <option disabled="disabled" selected="selected">-- SELECT --</option>
       <option>(-) Irrelevant</option>
-      <option>(o) Neutral</option>
-      <option>(+) Slightly Relevant</option>
+     <option>(o) Neutral</option>
+     <option>(+) Slightly Relevant</option>
+      <option>(++) Relevant</option>
+      <option>(+++) Very Relevant</option>
+    </select>
+	</div>
+	<div class="form-group">
+	<label for="short-dev">Short development time of DSL?</label>
+    <select required class="form-control textual-syntax" id="short-dev">
+      <option disabled="disabled" selected="selected">-- SELECT --</option>
+      <option>(-) Irrelevant</option>
+     <option>(o) Neutral</option>
+     <option>(+) Slightly Relevant</option>
+      <option>(++) Relevant</option>
+      <option>(+++) Very Relevant</option>
+    </select>
+	</div>
+    <div class="form-group">
+	<label for="tool-meeting">DSL as a tool in customer meetings?</label>
+    <select required class="form-control graphical-syntax" id="tool-meeting">
+      <option disabled="disabled" selected="selected">-- SELECT --</option>
+      <option>(-) Irrelevant</option>
+     <option>(o) Neutral</option>
+     <option>(+) Slightly Relevant</option>
       <option>(++) Relevant</option>
       <option>(+++) Very Relevant</option>
     </select>
     </div>
-    <div class="form-group">
-    <label for="teamwork-support">Teamwork support?</label>
-    <select required class="form-control" id="teamwork-support">
+	<div class="form-group">
+	<label for="indiv">Individualized end products?</label>
+    <select required class="form-control graphical-syntax" id="indiv">
       <option disabled="disabled" selected="selected">-- SELECT --</option>
       <option>(-) Irrelevant</option>
-      <option>(o) Neutral</option>
-      <option>(+) Slightly Relevant</option>
+     <option>(o) Neutral</option>
+     <option>(+) Slightly Relevant</option>
       <option>(++) Relevant</option>
       <option>(+++) Very Relevant</option>
     </select>
-    </div>
-    <div class="form-group">
-    <label for="architecture">Complexity reduction (architecture, control flows)?</label>
-    <select required class="form-control" id="architecture">
+	</div>
+	<div class="form-group">
+	<label for="transparency">Transparency for customers?</label>
+    <select required class="form-control graphical-syntax" id="transparency">
       <option disabled="disabled" selected="selected">-- SELECT --</option>
       <option>(-) Irrelevant</option>
-      <option>(o) Neutral</option>
-      <option>(+) Slightly Relevant</option>
+     <option>(o) Neutral</option>
+     <option>(+) Slightly Relevant</option>
       <option>(++) Relevant</option>
       <option>(+++) Very Relevant</option>
     </select>
-    </div>
-    <div class="form-group">
-    <label for="loops">Complexity reduction (code, loops)? </label>
-    <select required class="form-control" id="loops">
-      <option disabled="disabled" selected="selected">-- SELECT --</option>
-      <option>(-) Irrelevant</option>
-      <option>(o) Neutral</option>
-      <option>(+) Slightly Relevant</option>
-      <option>(++) Relevant</option>
-      <option>(+++) Very Relevant</option>
-    </select>
-    </div>
-    <div class="form-group">
-    <label for="outcome-limit">Limiting the possible outcomes?</label>
-    <select required class="form-control" id="outcome-limit">
-      <option disabled="disabled" selected="selected">-- SELECT --</option>
-      <option>(-) Irrelevant</option>
-      <option>(o) Neutral</option>
-      <option>(+) Slightly Relevant</option>
-      <option>(++) Relevant</option>
-      <option>(+++) Very Relevant</option>
-    </select>
-    </div>
-	<button type="submit" class="btn btn-primary" id="next_page_1" style="position: relative; float: right;">Next ></button>
+	</div>
+	<button type="submit" class="btn btn-warning" id="evaluate" style="position: relative; float: center; width: 100%;">Evaluate!</button>
 </form>
     
     </div>
@@ -86,3 +86,8 @@
       <script src="myjquery.js"></script>
   </body>
 </html>
+
+
+
+
+
