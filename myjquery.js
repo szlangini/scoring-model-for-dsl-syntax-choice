@@ -378,7 +378,6 @@ $(".jumbotron").html(relevanceOnePage);
 		
 		var c_graphical_weighted = points_graphical*comm_weight;
 		points_graphical = 0;
-		alert("weighted points for communication basis: text: " +c_textual_weighted+ " Graph: " + c_graphical_weighted);
 	
 		// 1.4 push next page
 		var relevanceThreePage =  '       <p class="small" style="text-align: right;">Economical Orientation 3/3</p>  '  + 
@@ -500,10 +499,43 @@ $(".jumbotron").html(relevanceOnePage);
 		var total_textual = t_textual_weighted + c_textual_weighted + e_textual_weighted;
 		var total_graphical = t_graphical_weighted + c_graphical_weighted + e_graphical_weighted;
 		
+        
 		if (total_textual > total_graphical) {
 			alert("A textual syntax is recommended.");
+            
+            
+            var text_page = '<center>'+
+'        <p class="lead">A Texutal Syntax is Recommended!</p>'+
+'        <p class="small">Points for Textual Syntax: <strong>47</strong> </p>'+
+'        <p class="small" id="lose">Points for Graphical Syntax: 30 </p>'+
+'        <img src="images/iconText.png" class="img-thumbnail" alt="Responsive image" style="width: 40%;">'+
+'    </center>';
+	
+        $(".jumbotron").html(text_page);
+            
+        $("strong").html(total_textual.toFixed(1));
+        $("#lose").html('Points for Graphical Syntax: ' + total_graphical.toFixed(1));
+        
+
+            
+            
 		} else{
-			alert("A graphical syntax is recommended.");
+            
+            var graphic_page =
+'    <center>'+
+'        <p class="lead">A Graphical Syntax is Recommended!</p>'+
+'        <p class="small">Points for Graphical Syntax: <strong>47</strong> </p>'+
+'        <p class="small" id="lose">Points for Textual Syntax: 30 </p>'+
+'        <img src="images/iconGrafik.png" class="img-thumbnail" alt="Responsive image" style="width: 50%;">'+
+'    </center>';      
+            
+        $(".jumbotron").html(graphic_page);
+            
+        $("strong").html(total_graphical.toFixed(1));
+        $("#lose").html('Points for Graphical Syntax: ' + total_textual.toFixed(1));
+
+	
+
 		}
 	
 	
