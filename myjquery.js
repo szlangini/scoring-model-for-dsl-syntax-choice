@@ -508,7 +508,7 @@ $(".jumbotron").html(relevanceOnePage);
 '        <p class="lead">A Texutal Syntax is Recommended!</p>'+
 '        <p class="small">Points for Textual Syntax: <strong>47</strong> </p>'+
 '        <p class="small" id="lose">Points for Graphical Syntax: 30 </p>'+
-'        <img src="images/iconText.png" class="img-thumbnail" alt="Responsive image" style="width: 40%;">'+
+'        <img src="iconText.png" class="img-thumbnail" alt="Responsive image" style="width: 40%;">'+
 '    </center>';
 	
         $(".jumbotron").html(text_page);
@@ -526,7 +526,7 @@ $(".jumbotron").html(relevanceOnePage);
 '        <p class="lead">A Graphical Syntax is Recommended!</p>'+
 '        <p class="small">Points for Graphical Syntax: <strong>47</strong> </p>'+
 '        <p class="small" id="lose">Points for Textual Syntax: 30 </p>'+
-'        <img src="images/iconGrafik.png" class="img-thumbnail" alt="Responsive image" style="width: 50%;">'+
+'        <img src="iconGrafik.png" class="img-thumbnail" alt="Responsive image" style="width: 50%;">'+
 '    </center>';      
             
         $(".jumbotron").html(graphic_page);
