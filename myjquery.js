@@ -532,7 +532,7 @@ $(".jumbotron").html(relevanceOnePage);
         $(".jumbotron").html(graphic_page);
             
         $("strong").html(total_graphical.toFixed(1));
-        $("#lose").html('Points for Graphical Syntax: ' + total_textual.toFixed(1));
+        $("#lose").html('Points for Textual Syntax: ' + total_textual.toFixed(1));
 
 	
 
